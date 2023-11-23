@@ -1,4 +1,13 @@
-all: holberton.c
-	gcc main.c holberton.c -o holberton
+# Makefile for the 'school' executable
 
+# Rule: all
+all: school
+
+# Rule to build the executable 'school'
+school: main.c student.c teacher.c
+    gcc -o school main.c student.c teacher.c
+
+# Clean rule to remove the executable and any object files
+clean:
+    rm -f school
 
